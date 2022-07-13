@@ -6,11 +6,15 @@ body {
     padding: 0;
     margin: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 background-color: #121212;
   color: white;
-  font-family: Verdana;
+  font-family: "Poppins",sans-serif;
 }
 a:link {
   color: #6600ff;
