@@ -1,5 +1,6 @@
 function isChecked(){
   if(document.getElementById("podtv").checked){
+    window.location.href = '/eventvybor.html'
     document.getElementById("message2").textContent = "https://pathfindertogami.github.io/eventvybor.html";
     document.getElementById("message1").textContent = " ";
     document.getElementById("text").textContent = "из за ебучего джаваскрипта придется копировать ссылку и вставлять ее вручную";
