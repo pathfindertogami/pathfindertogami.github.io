@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0px;
     padding: 0px;
@@ -20,6 +18,19 @@ html {
 
 section {
     padding: 2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 6rem;
+    color: #59178a;
+    padding: 1rem;
+    margin:  2rem 0;
+    background: rgba(70, 70, 70, 0.07);
+}
+
+.heading span{
+    color:#4c0070;
 }
 
 .btn {
@@ -68,6 +79,18 @@ header .logo {
     color: #545454;
 }
 
+#toplayer {
+    text-decoration: line-through rgb(68, 68, 68);
+}
+
+#self {
+    color: darkgrey;
+}
+
+#deliv {
+    color: darkgray;
+}
+
 header .navbar a {
     font-size: 2rem;
     padding: 0 1.5rem;
@@ -75,7 +98,7 @@ header .navbar a {
 }
 
 header .navbar a:hover {
-    color: #860faf;
+    color: #59178a;
 }
 
 header #toggler {
@@ -84,7 +107,7 @@ header #toggler {
 
 header .fa-bars {
     font-size: 3rem;
-    color: #860faf;
+    color: #59178a;
     border-radius: .5rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
@@ -117,14 +140,142 @@ header .fa-bars {
     line-height: 1.5;
 }
     
+.about .row{
+    display: flex;
+    align-items: right;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    background: url(about-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+  
+.about .row .content {
+    align-items: right;
+}
+  
+.about .row .content h2 {
+    font-size: 5rem;
+    color: #797979;
+    text-align: left;
+}
 
+.about .row .content p {
+    font-size: 3rem;
+    color: #797979;
+    text-align: left;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+.products .productes {
+    text-align: center;
+    font-size: 5rem;
+    color: #59178a;
+    padding: 1rem;
+    margin: 2rem 0;
+}
   
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
   
+.products .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    position: relative;
+}
   
-  
-  
-  
-  
+.products .box-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: #59178a;
+    background: rgba(80, 80, 80, 0.05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img {
+    height: 25rem;
+}
+
+.products .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.products .box-container .box .image .icons {
+    position: absolute;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    display: flex;
+}
+
+.products .box-container .box:hover .image .icons {
+    bottom:0;
+}
+
+.products .box-container .box .image .icons a {
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    width: 100%;
+    background: #59178a;
+    color: #fff;
+}
+
+.products .box-container .box .image .icons a:hover {
+    background: #333;
+}
+
+.products .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products .box-container .box .content h2 {
+    font-size: 2.5rem;
+    color:#333
+}
+
+.products .box-container .box .content .price {
+    font-size: 2.5rem;
+    color: #59178a;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.products .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color: #4c0070;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
 @media(max-width: 991px) {
     html {
         font-size: 55%;
@@ -182,5 +333,9 @@ header .fa-bars {
 @media(max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
     }
 }
