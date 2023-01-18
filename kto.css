@@ -5,40 +5,13 @@
     position: absolute;
     left: 50%;
     top: 40%;
-    transform: translate(-50%, -50%);
 }
 
 .kto {
     background: #181818;
 }
 
-.quote {
-    transform: translate(1%);
-}
-
-q {
-    color: #181818;
-    font-family: 'Source Sans Pro';
-    text-align: center;
-}
-
-.q {
-    color: #181818;
-    font-family: 'Source Sans Pro';
-    text-align: center;
-}
-
 .twitch {
-    background-color: #181818;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-}
-
-.discord {
     background-color: #181818;
     width: 7rem;
     height: 4rem;
@@ -67,15 +40,6 @@ q {
     overflow: hidden;
 }
 
-.discord:hover {
-    background-color: #5865F2;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-}
-
 .tg:hover {
     background-color: #22a8e8;
     width: 7rem;
@@ -88,17 +52,9 @@ q {
 .btntw {
     display: flex;
     position: absolute;
-    left: 50%;
+    left: 100%;
     top: 100%;
     transform: translate(75%, 50%);
-}
-
-.btnds {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(-175%, 50%);
 }
 
 .btntg {
@@ -110,11 +66,6 @@ q {
 }
 
 .btnictw {
-    padding-left: 2.05rem;
-    padding-top: .5rem;
-}
-
-.btnicds {
     padding-left: 2.05rem;
     padding-top: .5rem;
 }
@@ -155,14 +106,6 @@ q {
     transform: translate(75%, 50%);
 }
 
-.btnds:hover {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(-175%, 50%);
-}
-
 .btntg:hover {
     display: flex;
     position: absolute;
@@ -172,11 +115,6 @@ q {
 }
 
 .btnictw:hover {
-    padding-left: 2.05rem;
-    padding-top: .5rem;
-}
-
-.btnicds:hover {
     padding-left: 2.05rem;
     padding-top: .5rem;
 }
