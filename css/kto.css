@@ -18,7 +18,7 @@
     border-radius: 40px;
     position: relative;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .tg {
@@ -28,7 +28,7 @@
     border-radius: 40px;
     position: relative;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .twitch:hover {
@@ -54,7 +54,7 @@
     position: absolute;
     left: 100%;
     top: 100%;
-    transform: translate(75%, 50%);
+    transform: translate(17%, 50%);
 }
 
 .btntg {
@@ -62,7 +62,7 @@
     position: absolute;
     left: 50%;
     top: 100%;
-    transform: translate(-50%, 50%);
+    transform: translate(-120%, 50%);
 }
 
 .btnictw {
@@ -95,7 +95,7 @@
     position: absolute;
     left: 50%;
     top: 100%;
-    transform: translate(75%, 50%);
+    transform: translate(17%, 50%);
 }
 
 .btntg:hover {
@@ -103,7 +103,7 @@
     position: absolute;
     left: 50%;
     top: 100%;
-    transform: translate(-50%, 50%);
+    transform: translate(-120%, 50%);
 }
 
 .btnictw:hover {
