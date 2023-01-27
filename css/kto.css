@@ -82,14 +82,6 @@
     position: relative;
 }
 
-.discord:hover {
-    background-color: #5865F2;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-}
-
 .tg:hover {
     background-color: #22a8e8;
     width: 7rem;
