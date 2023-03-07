@@ -19,23 +19,70 @@
         @font-face {
             font-family: ‘UD Digi Kyokasho NP-R’;
             src: url(media/UDDigiKyokashoN-R.ttc);
-}
+        }
 
-body {
-    background-color: #181818;
-    color: #181818;
-}
+        * {
+            font-family: 'UD Digi Kyokasho NP-R';
+            font-size: 50px;
+        }
 
-.main {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-}
+        body {
+            background-color: #181818;
+            color: #181818;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
 
-
-
+        .main {
+            display: flex;
+            height: 70px;
+            padding: 50px 30px;
+            box-sizing: content-box;
+            background-color: #181818;
+            z-index: 1;
+            border-radius: 20px;
+        }
+        .bg {
+            z-index: -1;
+            position: absolute;
+        }
+        span {
+            display: block;
+            height: 100%;
+            padding-left: 10px;
+            animation: spin_words 6s infinite;
+            color: #8100ff;
+        }
+        .text {
+            overflow: hidden;
+        }
+        @keyframes spin_words {
+            10% {
+                transform: translateY(-112%);
+            }
+            25% {
+                transform: translateY(-100%);
+            }
+            35% {
+                transform: translateY(-212%);
+            }
+            50% {
+                transform: translateY(-200%);
+            }
+            60% {
+                transform: translateY(-312%);
+            }
+            75% {
+                transform: translateY(-300%);
+            }
+            85% {
+                transform: translateY(-412%);
+            }
+            100% {
+                transform: translateY(-400%);
+            }
+        }
     </style>
     <!--ebal-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,9 +95,17 @@ body {
 <!--ebal-->
 <body>
     <!--ebal-->
-
+    <div class="main">
+        <div class="text">
+            <span> </span>
+            <span>Когда нибудь я что то сделаю тут</span>
+            <span>но когда</span>
+            <span>в душе не ебу</span>
+            <span> </span>
+        </div>
+    </div>
     <!--ebal-->
-    <iframe src="https://www.youtube.com/embed/AVpVNExalJI?start=15&amp;autoplay=1&amp;controls=0&amp;loop=1&playlist=AVpVNExalJI" allow="accelerometer; autoplay; encrypted-media; gyroscope; loop; repeat; picture-in-picture" width="1" height="1" frameborder="0"></iframe>
+    <video class="bg" src="https://files.catbox.moe/5gewvi.mp4" autoplay width="1920" height="900"></video>
     <!--ebal-->
 </body>
 <!--ebal-->
