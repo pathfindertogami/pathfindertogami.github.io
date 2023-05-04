@@ -24,38 +24,32 @@
         * {
             font-family: 'UD Digi Kyokasho NP-R';
             font-size: 50px;
+            transition: .2s;
         }
 
         body {
-            background-color: #181818;
+            background-image: url("https://cdn.discordapp.com/attachments/923801475933671485/1103647618472624218/Space_parallax.png");
             color: #181818;
-            display: grid;
-            place-items: center;
             height: 100vh;
-        }
-
-        .main {
             display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main {
             height: 70px;
-            padding: 50px 30px;
+            padding: 35px 50px;
             box-sizing: content-box;
             background-color: #181818;
             z-index: 1;
             border-radius: 20px;
         }
-        .bg {
-            z-index: -1;
-            position: absolute;
-        }
-        span {
-            display: block;
-            height: 100%;
-            padding-left: 10px;
-            animation: spin_words 6s infinite;
+        a {
+            display: inline;
             color: #8100ff;
+            position: relative;
         }
-        .text {
-            overflow: hidden;
+        a:hover {
+            color: #991C00
         }
     </style>
     <!--ebal-->
@@ -69,8 +63,22 @@
 <!--ebal-->
 <body>
     <!--ebal-->
-    <div class="main">
+    <div class="main" id="main">
+        <a href="kto/index.html" style="text-decoration: none;">?</a>
     </div>
+    <script>
+        const body = document.querySelector("body")
+        const ael = document.querySelectorAll("a")
+
+        ael.forEach(el => {
+            el.addEventListener("mouseover", () => {
+                body.style.backgroundImage = `url("https://cdn.discordapp.com/attachments/923801475933671485/1103723549656625372/image.png")`;
+            })
+            el.addEventListener("mouseout", () => {
+                body.style.backgroundImage = `url("https://cdn.discordapp.com/attachments/923801475933671485/1103647618472624218/Space_parallax.png")`;
+            })
+        })
+    </script>
     <!--ebal-->
 </body>
 <!--ebal-->
