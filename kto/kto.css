@@ -63,6 +63,7 @@ body {
     padding: 5cap;
     background-color: #181818;
     animation: animate 20s linear infinite;
+    overflow: hidden;
 }
 
 .icon:hover {
@@ -71,7 +72,7 @@ body {
 
 span {
     font-family: UD Digi Kyokasho NP-B;
-    text-shadow: 1px 1px 1px #8100ff, 0 0 1em #c300ff, 0 0 0.2em #00f7ff;
+    display: none;
 }
 
 @keyframes animate {
@@ -85,5 +86,14 @@ span {
 
     100% {
         background-position: 0 0;
+    }
+}
+
+@media (max-width: 1919px) {
+    .main {
+        display: none;
+    }
+    span {
+        color: #8100ff;
     }
 }
