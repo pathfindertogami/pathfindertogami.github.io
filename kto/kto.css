@@ -1,116 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@font-face {
+    font-family: ‘UD Digi Kyokasho NP-B’;
+    src: url(media/UDDigiKyokashoN-R.ttc);
+}
+
+@font-face {
+    font-family: ‘UD Digi Kyokasho NP-R’;
+    src: url(media/UDDigiKyokashoN-R.ttc);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 .main {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-}
-
-.kto {
+    position: relative;
+    width: 36.458%;
+    height: 50vh;
     background: #181818;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.twitch {
+.main::before,
+.main::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #8100ff, #c300ff, #00f7ff, #c300ff, #8100ff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+    filter: blur(50px);
+    opacity: 0.99;
+}
+
+.perda {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+
+.icon {
+    padding: 5cap;
     background-color: #181818;
-    width: 7rem;
-    height: 4rem;
+    animation: animate 20s linear infinite;
+}
+
+.icon:hover {
     border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
 }
 
-.tg {
-    background-color: #181818;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
+span {
+    font-family: UD Digi Kyokasho NP-B;
+    text-shadow: 1px 1px 1px #8100ff, 0 0 1em #c300ff, 0 0 0.2em #00f7ff;
 }
 
-.twitch:hover {
-    background-color: #9146FF;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
 
-.tg:hover {
-    background-color: #22a8e8;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-}
+    50% {
+        background-position: 400% 0;
+    }
 
-.btntw {
-    display: flex;
-    position: absolute;
-    left: 100%;
-    top: 100%;
-    transform: translate(17%, 50%);
-}
-
-.btntg {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(-120%, 50%);
-}
-
-.btnictw {
-    padding-left: 2.05rem;
-    padding-top: .5rem;
-}
-
-.btnictg {
-    padding-left: 1.6rem;
-}
-
-.twitch:hover {
-    background-color: #9146FF;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-}
-
-.tg:hover {
-    background-color: #22a8e8;
-    width: 7rem;
-    height: 4rem;
-    border-radius: 40px;
-    position: relative;
-}
-
-.btntw:hover {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(17%, 50%);
-}
-
-.btntg:hover {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: translate(-120%, 50%);
-}
-
-.btnictw:hover {
-    padding-left: 2.05rem;
-    padding-top: .5rem;
-}
-
-.btnictg:hover {
-    padding-left: 1.6rem;
+    100% {
+        background-position: 0 0;
+    }
 }
