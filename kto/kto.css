@@ -89,7 +89,7 @@ span {
     }
 }
 
-@media (max-width: 1919px) {
+@media only screen and (max-width: 1919px) {
     .main {
         display: none;
     }
