@@ -1,0 +1,107 @@
+@font-face {
+    font-family: ‘UD Digi Kyokasho NP-B’;
+    src: url(https://cdn.discordapp.com/attachments/689158553138757649/1139591336144683178/UDDigiKyokashoN-R.ttc);
+}
+@font-face {
+    font-family: ‘UD Digi Kyokasho NP-R’;
+    src: url(https://cdn.discordapp.com/attachments/689158553138757649/1139591336144683178/UDDigiKyokashoN-R.ttc);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#main {
+    position: relative;
+    width: 36.458%;
+    height: 50vh;
+    background: #181818;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main::before,
+#main::after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #8100ff, #c300ff, #00f7ff, #c300ff, #8100ff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+    filter: blur(50px);
+    opacity: 0.99;
+}
+#perda {
+    width: 100%;
+    position: relative;
+}
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 10px;
+}
+.icon {
+    padding: 5cap;
+    background-color: #181818;
+    animation: animate 20s linear infinite;
+    overflow: hidden;
+}
+.icon:hover {
+    border-radius: 40px;
+}
+span {
+    font-family: UD Digi Kyokasho NP-B;
+    display: none;
+    text-align: center;
+}
+#chrome {
+    display: none;
+    color: #8100ff;
+    font-family: 'UD Digi Kyokasho NP-B';
+}
+#firefox {
+    display: none;
+    color: #8100ff;
+    font-family: 'UD Digi Kyokasho NP-B';
+}
+#firefox:hover {
+    color: #00f7ff;
+    background-color: transparent;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+@media only screen and (max-width: 1919px) and (max-height: 1079px) {
+    body {
+        background-image: none;
+    }
+    #main {
+        display: none;
+    }
+    #notfullscreen {
+        color: #8100ff;
+        display: flex;
+    }
+    #chrome {
+        display: none;
+    }
+}
