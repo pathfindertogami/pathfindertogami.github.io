@@ -20,7 +20,7 @@ function browserDetect() {
 }
 function randomSong() {
     src = ["https://audio.jukehost.co.uk/jAhLqGYIvSW9qwgaptyLDhIKVcj2jfB0", "https://audio.jukehost.co.uk/kIV5aMsrUHcgYuqOoq5z3JnoYz88EFt4", "https://audio.jukehost.co.uk/MhoEruseoO7aNFh1CWXOJMoFBHB4gzex", "https://audio.jukehost.co.uk/A78R2kQyWVJqD6osXPEopDqGP302zyNo", "https://audio.jukehost.co.uk/cWpDr4JHa0ZgUh18Rv7xGZUKkRLP4Gix", "https://audio.jukehost.co.uk/AGCggHySS3Dkk5j0cHsttxb7JbHQyGA5",  "https://audio.jukehost.co.uk/3pGyQPezHLVYTMsrPIlfxaazEBmfABtI", "https://audio.jukehost.co.uk/XxaQGl2XoK95eDKSJZKdAKJ535hTqZXH", "https://audio.jukehost.co.uk/Olx6arQCYgjuD3QIQgP5inY2sSg1Ohsc", "https://audio.jukehost.co.uk/QGOmzwJxYJ7ZvwbhyQvq1NHRFiJS7nme", "https://audio.jukehost.co.uk/2VR8bSLZoiYm4TC81sBCycQH9d8iJOD0", "https://audio.jukehost.co.uk/fBL7XcbWYSUqba4uht7RDXanZvHXqaWx"]
-    random = Math.floor(Math.random() * (Math.floor(13) - Math.ceil(1)) + Math.ceil(1))
+    random = Math.floor(Math.random() * (Math.floor(11) - Math.ceil(0)) + Math.ceil(0))
     document.getElementById("audio").src = src[random]
 }
 function windowSize() {
@@ -28,6 +28,7 @@ function windowSize() {
     var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     document.getElementById("notfullscreen").innerHTML ="(>ω< ) <br> никаких экранов/окон размером меньше 1450x850 <br><br>" + width + "/1450" + " " + height + "/850"
 }
+document.
 window.onload = randomSong();
 window.onload = browserDetect();
 window.onload = windowSize();
