@@ -90,7 +90,7 @@ span {
         background-position: 0 0;
     }
 }
-@media only screen and (max-width: 1919px) and (max-height: 1079px) {
+@media only screen and (max-width: 1450px), (max-height: 850px) {
     body {
         background-image: none;
     }
@@ -99,9 +99,10 @@ span {
     }
     #notfullscreen {
         color: #8100ff;
-        display: flex;
+        display: block;
     }
-    #chrome {
-        display: none;
+    #window {
+        color: #8100ff;
+        display: block;
     }
 }
