@@ -15,6 +15,14 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+#muteicon {
+    position: absolute;
+    left: calc(100% - 106px);
+    top: calc(100% - 106px);
+}
+#oneko {
+    z-index: -2;
+}
 #main {
     position: relative;
     width: 36.458%;
@@ -51,14 +59,15 @@ body {
     margin-bottom: 8px;
     padding: 10px;
 }
-.icon {
+#icon {
     padding: 5cap;
     background-color: #181818;
     animation: animate 20s linear infinite;
     overflow: hidden;
+    cursor: default;
 }
-.icon:hover {
-    border-radius: 40px;
+img {
+    cursor: pointer;
 }
 span {
     font-family: UD Digi Kyokasho NP-B;
@@ -70,12 +79,12 @@ span {
     color: #8100ff;
     font-family: 'UD Digi Kyokasho NP-B';
 }
-#firefox {
+#firefoxdl {
     display: none;
     color: #8100ff;
     font-family: 'UD Digi Kyokasho NP-B';
 }
-#firefox:hover {
+#firefoxdl:hover {
     color: #00f7ff;
     background-color: transparent;
 }

@@ -14,7 +14,7 @@ function browserDetect() {
     if (browserName != "firefox") {
         document.getElementById("chrome").style.display = `flex`;
         document.getElementById("main").style.display = `none`;
-        document.getElementById("firefox").style.display = `flex`;
+        document.getElementById("firefoxdl").style.display = `flex`;
         document.getElementById("notfullscreen").style.display = `none`;
     }
 }
@@ -28,7 +28,32 @@ function windowSize() {
     var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     document.getElementById("notfullscreen").innerHTML ="(>ω< ) <br> никаких экранов/окон размером меньше 1450x850 <br><br>" + width + "/1450" + " " + height + "/850"
 }
-document.
+function soundonhover() {
+    document.getElementById("hover").play();
+    document.getElementById("revoh").currentTime = 0;
+}
+function resetonhover() {
+    document.getElementById("hover").pause();
+    document.getElementById("hover").currentTime = 0;
+    document.getElementById("revoh").play();
+}
+function togglePlay() {
+    isPlaying ? document.getElementById("audio").pause() : document.getElementById("audio").play();
+};
+    document.getElementById("audio").onplaying = function() {
+    isPlaying = true;
+    document.getElementById("muteicon").src = "https://cdn.discordapp.com/attachments/689158553138757649/1140294669364903996/unmuted.png";
+};
+    document.getElementById("audio").onpause = function() {
+    isPlaying = false;
+    document.getElementById("muteicon").src = "https://cdn.discordapp.com/attachments/689158553138757649/1140294669071298682/muted.png";
+};
+document.querySelectorAll("img").forEach(function (img) {
+    img.addEventListener('mouseover', soundonhover);
+});
+document.querySelectorAll("img").forEach(function (img) {
+    img.addEventListener('mouseout', resetonhover);
+});
 window.onload = randomSong();
 window.onload = browserDetect();
 window.onload = windowSize();
