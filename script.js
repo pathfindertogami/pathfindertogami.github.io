@@ -1,4 +1,4 @@
-function browserDetect() {
+/*function browserDetect() {
     let userAgent = navigator.userAgent;
     let browserName;
     if ((navigator.userAgent.indexOf('OPR')) != -1 ) {
@@ -40,11 +40,11 @@ function resetonhover() {
 function togglePlay() {
     isPlaying ? document.getElementById("audio").pause() : document.getElementById("audio").play();
 };
-    document.getElementById("audio").onplaying = function() {
+document.getElementById("audio").onplaying = function() {
     isPlaying = true;
     document.getElementById("muteicon").src = "https://cdn.discordapp.com/attachments/689158553138757649/1140294669364903996/unmuted.png";
 };
-    document.getElementById("audio").onpause = function() {
+document.getElementById("audio").onpause = function() {
     isPlaying = false;
     document.getElementById("muteicon").src = "https://cdn.discordapp.com/attachments/689158553138757649/1140294669071298682/muted.png";
 };
@@ -53,8 +53,11 @@ document.querySelectorAll("img").forEach(function (img) {
 });
 document.querySelectorAll("img").forEach(function (img) {
     img.addEventListener('mouseout', resetonhover);
-});
-window.onload = randomSong();
-window.onload = browserDetect();
-window.onload = windowSize();
-window.onresize = windowSize;
+});*/
+document.getElementById("main").style.display = `none`;
+document.getElementById("notfullscreen").style.display = `none`;
+document.getElementById("muteicon").style.display = `none`;
+//window.onload = randomSong();
+//window.onload = browserDetect();
+//window.onload = windowSize();
+//window.onresize = windowSize;
