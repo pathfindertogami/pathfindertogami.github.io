@@ -1,12 +1,3 @@
-@font-face {
-    font-family: ‘UD Digi Kyokasho NP-B’;
-    src: url(https://cdn.discordapp.com/attachments/689158553138757649/1139591336144683178/UDDigiKyokashoN-R.ttc);
-}
-@font-face {
-    font-family: ‘UD Digi Kyokasho NP-R’;
-    src: url(https://cdn.discordapp.com/attachments/689158553138757649/1139591336144683178/UDDigiKyokashoN-R.ttc);
-}
-/*font credits: © Copyright 2016-2017 TypeBank Co., Ltd. All Rights Reserved.*/
 body {
     margin: 0;
     padding: 0;
@@ -71,19 +62,16 @@ img {
     cursor: pointer;
 }
 span {
-    font-family: UD Digi Kyokasho NP-B;
     display: none;
     text-align: center;
 }
 #chrome {
     display: none;
     color: #8100ff;
-    font-family: 'UD Digi Kyokasho NP-B';
 }
 #firefoxdl {
     display: none;
     color: #8100ff;
-    font-family: 'UD Digi Kyokasho NP-B';
 }
 #firefoxdl:hover {
     color: #00f7ff;

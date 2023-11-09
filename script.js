@@ -42,11 +42,11 @@ function togglePlay() {
 };
 document.getElementById("audio").onplaying = function() {
     isPlaying = true;
-    document.getElementById("muteicon").src = "https://cdn.discordapp.com/attachments/689158553138757649/1140294669364903996/unmuted.png";
+    document.getElementById("muteicon").src = "https://gachi.gay/VWJ6y";
 };
 document.getElementById("audio").onpause = function() {
     isPlaying = false;
-    document.getElementById("muteicon").src = "https://cdn.discordapp.com/attachments/689158553138757649/1140294669071298682/muted.png";
+    document.getElementById("muteicon").src = "https://gachi.gay/M0HS8";
 };
 document.querySelectorAll("img").forEach(function (img) {
     img.addEventListener('mouseover', soundonhover);
