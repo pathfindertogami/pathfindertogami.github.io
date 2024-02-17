@@ -7,13 +7,13 @@ const tracks = ["https://modarchive.org/index.php?request=view_by_moduleid&query
 function browserDetect() {
     let userAgent = navigator.userAgent;
     let browserName;
-    if ((navigator.userAgent.indexOf('OPR')) != -1 ) {
-        browserName = "opera";
+    if ((navigator.userAgent.indexOf('YaBrowser')) != -1 ) {
+        browserName = "иди нахуй";
     } else if (navigator.userAgent.indexOf("Edg") != -1 ) { 
-        browserName = "edge"; 
+        browserName = "install linux"; 
     } else if (navigator.userAgent.indexOf("Chrome") != -1 ) { 
         browserName = "chrome";
-    } else if (navigator.userAgent.indexOf("YaBrowser") != -1 ) {
+    } else if (navigator.userAgent.indexOf("OPR") != -1 ) {
         browserName = "kill yourself";
     }  else if (navigator.userAgent.indexOf("Firefox") != -1 ) { 
         browserName = "firefox"; 
