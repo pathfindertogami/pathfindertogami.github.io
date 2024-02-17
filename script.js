@@ -10,7 +10,7 @@ function browserDetect() {
     if ((navigator.userAgent.indexOf('YaBrowser')) != -1 ) {
         browserName = "иди нахуй";
     } else if (navigator.userAgent.indexOf("Edg") != -1 ) { 
-        browserName = "install linux"; 
+        browserName = "uninstall this shit"; 
     } else if (navigator.userAgent.indexOf("Chrome") != -1 ) { 
         browserName = "chrome";
     } else if (navigator.userAgent.indexOf("OPR") != -1 ) {
