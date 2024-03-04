@@ -5,23 +5,29 @@ const names = ["addiction.mod", "0-insnej.xm", "chucks_song_35.s3m", "ff.s3m", "
 const tracks = ["https://modarchive.org/index.php?request=view_by_moduleid&query=167100", "https://modarchive.org/index.php?request=view_by_moduleid&query=162098", "https://modarchive.org/index.php?request=view_by_moduleid&query=69007", "https://modarchive.org/index.php?request=view_by_moduleid&query=41904", "https://modarchive.org/index.php?request=view_by_moduleid&query=69231", "https://modarchive.org/index.php?request=view_by_moduleid&query=165651", "https://modarchive.org/index.php?request=view_by_moduleid&query=47208", "https://modarchive.org/index.php?request=view_by_moduleid&query=171963", "https://modarchive.org/index.php?request=view_by_moduleid&query=168070", "https://modarchive.org/index.php?request=view_by_moduleid&query=56013", "https://modarchive.org/index.php?request=view_by_moduleid&query=77561", "https://modarchive.org/index.php?request=view_by_moduleid&query=60274", "https://modarchive.org/index.php?request=view_by_moduleid&query=78676", "https://modarchive.org/index.php?request=view_by_moduleid&query=168435"]
 
 function browserDetect() {
-    let userAgent = navigator.userAgent;
     let browserName;
     if ((navigator.userAgent.indexOf('YaBrowser')) != -1 ) {
         browserName = "иди нахуй";
     } else if (navigator.userAgent.indexOf("Edg") != -1 ) { 
-        browserName = "uninstall this shit"; 
+        browserName = "edge (please uninstall this shit)"; 
     } else if (navigator.userAgent.indexOf("Chrome") != -1 ) { 
         browserName = "chrome";
     } else if (navigator.userAgent.indexOf("OPR") != -1 ) {
-        browserName = "kill yourself";
+        browserName = "opera (kill yourself)";
     }  else if (navigator.userAgent.indexOf("Firefox") != -1 ) { 
-        browserName = "firefox"; 
+        browserName = "firefox";
     };
     document.getElementById("browser").textContent = browserName;
     if (browserName != "firefox") {
         document.getElementById("chromium").style.visibility = `visible`;
+        document.getElementById("nowplaying").remove();
+    } else {
+        document.getElementById("chromium").remove();
     }
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      document.getElementById("nowplaying").remove();
+    }
+    
 }
 function GET(url) 
 {
@@ -42,7 +48,7 @@ function gettrack(url)
     document.getElementById("track").href = tracklink;
     setTimeout(gettrack, 1000);
 }
-function uptime() {
+function time() {
     var start = new Date("Apr 4, 2008 09:00:00 GMT+0500");
     var now = new Date();
     let uptime = Math.abs(now.getTime() - start.getTime())/1000;
@@ -58,7 +64,52 @@ function setbgm() {
     document.getElementById("mod").href = tracks[rand];
     document.getElementById("mod").textContent = names[rand];
 }
+
+// Make the DIV element draggable:
+dragElement(document.getElementById("window"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
 gettrack(url);
 browserDetect();
-uptime();
+time();
 setbgm();

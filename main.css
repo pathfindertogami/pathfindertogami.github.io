@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+* {
+    font-family: 'Fira Code', monospace;
+}
 body {
-    background-color: #1e1e2e;
-    display: flex;
-    justify-content: center;
+    background-color: #181825;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 p, a {
     color:#cba6f7;
-    font-family: 'Fira Code', monospace;
 }
 a:hover {
     color: #74c7ec;
@@ -15,4 +20,46 @@ a:hover {
 #chromium {
     font-size: 12px;
     visibility: hidden;
+}
+#window {
+    display: flex;
+    position: absolute;
+    z-index: 9;
+    background-color: #1e1e2e;
+    border: 1px solid #b4befe;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeInAnimation ease 1s;
+    min-width: 900px;
+    min-height: 350px;
+}
+#data {
+    padding: 10px;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media screen and (orientation:portrait) and (min-width:900px) and (min-height:800px) {
+    #window {
+        display: block;
+        text-align: center;
+        min-width: none;
+        font-size: 36px;
+    }
+    #data {
+        text-align: left;
+    }
+    #art {
+        transform: scale(1.3);
+    }
 }
