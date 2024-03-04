@@ -7,15 +7,17 @@ const tracks = ["https://modarchive.org/index.php?request=view_by_moduleid&query
 function browserDetect() {
     let browserName;
     if ((navigator.userAgent.indexOf('YaBrowser')) != -1 ) {
-        browserName = "иди нахуй";
+      browserName = "иди нахуй";
     } else if (navigator.userAgent.indexOf("Edg") != -1 ) { 
-        browserName = "edge (please uninstall this shit)"; 
+      browserName = "edge (uninstall this ffs)"; 
     } else if (navigator.userAgent.indexOf("Chrome") != -1 ) { 
-        browserName = "chrome";
+      browserName = "chrome";
     } else if (navigator.userAgent.indexOf("OPR") != -1 ) {
-        browserName = "opera (kill yourself)";
-    }  else if (navigator.userAgent.indexOf("Firefox") != -1 ) { 
-        browserName = "firefox";
+      browserName = "opera (kill yourself)";
+    } else if (navigator.userAgent.indexOf("Firefox") != -1 ) { 
+      browserName = "firefox";
+    } else if (navigator.userAgent.indexOf("Safari") != -1) {
+      browserName = "safari"
     };
     document.getElementById("browser").textContent = browserName;
     if (browserName != "firefox") {
@@ -63,50 +65,6 @@ function setbgm() {
     document.getElementById("bgm").src = srcs[rand];
     document.getElementById("mod").href = tracks[rand];
     document.getElementById("mod").textContent = names[rand];
-}
-
-// Make the DIV element draggable:
-dragElement(document.getElementById("window"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
 }
 
 gettrack(url);
